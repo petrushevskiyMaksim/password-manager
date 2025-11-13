@@ -1,7 +1,7 @@
 import { memo, useCallback, useState } from 'react';
 import cls from './Navbar.module.css';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 
 interface NavbarProps {
     className?: string;
@@ -22,15 +22,16 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         <header className={classNames(cls.Navbar, {}, [className])}>
             <Button
                 theme={ButtonTheme.CLEAR_INVERTED}
+                size={ButtonSize.L}
                 className={cls.links}
                 onClick={onShowModal}
             >
-                {'Войти'}
+                Сгенерировать новый пароль
             </Button>
 
-            {isAuthModal && (
+            {/* {isAuthModal && (
                 <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
-            )}
+            )} */}
         </header>
     );
 });
