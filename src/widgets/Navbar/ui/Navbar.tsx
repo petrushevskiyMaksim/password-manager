@@ -2,6 +2,7 @@ import { memo, useCallback, useState } from 'react';
 import cls from './Navbar.module.css';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
+import { GenerateModal } from 'features/generatePassword/ui/GenerateModal/GenerateModal';
 
 interface NavbarProps {
     className?: string;
@@ -29,9 +30,9 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 Сгенерировать новый пароль
             </Button>
 
-            {/* {isAuthModal && (
-                <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
-            )} */}
+            {/* {isAuthModal && ( */}
+            <GenerateModal isOpen={isAuthModal} onClose={onCloseModal} />
+            {/* // )} */}
         </header>
     );
 });

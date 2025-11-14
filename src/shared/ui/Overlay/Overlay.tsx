@@ -1,4 +1,4 @@
-import cls from './Overlay.module.scss';
+import cls from './Overlay.module.css';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 
